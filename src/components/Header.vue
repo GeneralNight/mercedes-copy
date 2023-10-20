@@ -12,7 +12,7 @@ const searchFocused = ref(false);
     <div class="flex flex-col items-center flex-1">
       <!-- TOP HEADER -->
       <div
-        class="flex justify-center w-full py-4 lg:border-b border-white border-opacity-20 px-[50px] lg:px-[80px] 2xl:px-[110px]"
+        class="flex justify-center w-full py-4 lg:border-b border-white border-opacity-20 px-[24px] sm:px-[50px] lg:px-[80px] 2xl:px-[110px]"
       >
         <div class="flex items-center justify-between flex-1">
           <!-- NAVBAR MOBILE -->
@@ -24,7 +24,11 @@ const searchFocused = ref(false);
           </button>
           <!-- LOGO -->
           <NuxtLink to="/" class="flex items-center gap-6">
-            <img src="~/assets/icons/logo.svg" alt="" class="w-[64px]" />
+            <img
+              src="~/assets/icons/logo.svg"
+              alt=""
+              class="w-[48px] sm:w-[64px]"
+            />
             <img
               src="~/assets/icons/logo-written.svg"
               alt=""
@@ -93,7 +97,7 @@ const searchFocused = ref(false);
       </nav>
 
       <div
-        class="flex justify-center items-center border-y border-white flex-1 w-full text-white py-2 md:text-lg xl:text-xl tracking-wide gap-1.5"
+        class="sm:flex justify-center items-center border-y border-white flex-1 w-full text-white py-2 md:text-lg xl:text-xl tracking-wide gap-1.5 hidden"
       >
         <span class=""> Confira as </span>
         <NuxtLink
@@ -102,6 +106,13 @@ const searchFocused = ref(false);
           melhores opções
         </NuxtLink>
         <span class=""> no Showroom Online Mercedez Benz. </span>
+      </div>
+      <div
+        class="sm:hidden justify-center items-center border-y border-white flex-1 w-full text-white py-2 text-sm sm:text-lg xl:text-xl tracking-wide gap-1.5 flex text-center"
+      >
+        <p class="">
+          Confira as melhores opções no Showroom Online Mercedez Benz.
+        </p>
       </div>
     </div>
   </div>

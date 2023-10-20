@@ -3,7 +3,7 @@ import { IRecommendation } from "~/types";
 
 const recommendationsList = ref<IRecommendation[]>([]);
 
-const recommendScroll = ref(null);
+const recommendScroll = ref<any>(null);
 const { x, y } = useScroll(recommendScroll, { behavior: "smooth" });
 
 const scrollNext = () => {
@@ -48,21 +48,29 @@ onMounted(() => {
 
 <template>
   <div
-    class="flex flex-col px-[50px] lg:px-[80px] 2xl:px-[100px] py-8 md:py-12 lg:py-16 2xl:py-24 gap-6 md:gap-10 2xl:gap-14"
+    class="flex flex-col p-6 sm:px-[50px] lg:px-[80px] 2xl:px-[100px] sm:py-8 md:py-12 lg:py-16 2xl:py-24 gap-3 sm:gap-6 md:gap-10 2xl:gap-14"
   >
-    <h1 class="text-3xl md:text-4xl font-light">Nossas Recomendações</h1>
-    <div class="relative flex items-center">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-light">
+      Nossas Recomendações
+    </h1>
+    <div class="relative flex sm:items-center">
       <button
         @click="scrollPrevious"
-        class="w-12 h-12 rounded-full bg-white controls-shadow flex items-center justify-center absolute left-4 hover:brightness-90 transition-all duration-[.25] z-10"
+        class="h-10 w-10 sm:w-12 sm:h-12 mt-16 sm:mt-0 rounded-full bg-white controls-shadow flex items-center justify-center absolute left-4 hover:brightness-90 transition-all duration-[.25] z-10"
       >
-        <NuxtIcon name="caret-left" class="text-2xl text-black-300" />
+        <NuxtIcon
+          name="caret-left"
+          class="text-xl sm:text-2xl text-black-300"
+        />
       </button>
       <button
         @click="scrollNext"
-        class="w-12 h-12 rounded-full bg-white controls-shadow flex items-center justify-center absolute right-4 hover:brightness-90 transition-all duration-[.25] z-10"
+        class="h-10 w-10 sm:w-12 sm:h-12 mt-16 sm:mt-0 rounded-full bg-white controls-shadow flex items-center justify-center absolute right-4 hover:brightness-90 transition-all duration-[.25] z-10"
       >
-        <NuxtIcon name="caret-right" class="text-2xl text-black-300" />
+        <NuxtIcon
+          name="caret-right"
+          class="text-xl sm:text-2xl text-black-300"
+        />
       </button>
 
       <div

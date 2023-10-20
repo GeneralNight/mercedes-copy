@@ -43,16 +43,16 @@ onMounted(() => {
       </div>
     </div>
     <div
-      class="relative flex flex-col lg:hidden bg-black px-[50px] pb-10 -top-[1px]"
+      class="relative flex flex-col lg:hidden bg-black px-6 sm:px-[50px] pb-10 -top-[1px]"
     >
       <p
-        class="text-3xl lg:text-4xl leading-[1.35] font-light tracking-tight text-white relative -top-14 lg:-top-20 z-[5]"
+        class="text-2xl sm:text-3xl lg:text-4xl leading-[1.35] font-light tracking-tight text-white relative -top-8 sm:-top-14 lg:-top-20 z-[5]"
       >
         Conheça o novo <br />
         CLA Coupé.
       </p>
       <NuxtLink
-        class="px-8 py-3 text-center font-semibold tracking-wider border border-[#0078d6] bg-[#0078d6] text-white rounded-sm hover:bg-[#014880] transition-all duration-[.25] cursor-pointer"
+        class="text-sm sm:text-base px-8 py-3 text-center font-semibold tracking-wider border border-[#0078d6] bg-[#0078d6] text-white rounded-sm hover:bg-[#014880] transition-all duration-[.25] cursor-pointer"
       >
         Saiba mais
       </NuxtLink>
